@@ -1,0 +1,568 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.main-header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 0.5rem 0;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.search-container {
+    flex: 1;
+    max-width: 400px;
+    margin: 0 2rem;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.top-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.login-button {
+    background-color: #2c3e50;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.main-nav {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eee;
+}
+
+.nav-list {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-list a {
+    display: block;
+    padding: 1rem 0;
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.nav-list a.active {
+    color: #b8860b;
+    border-bottom: 2px solid #b8860b;
+}
+
+.booking-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.booking-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.booking-description {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.booking-content {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 2rem;
+}
+
+.booking-form {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.form-section {
+    padding: 1.5rem;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.form-section h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.form-group label span {
+    color: #666;
+    font-weight: normal;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.phone-input {
+    display: flex;
+    gap: 0.5rem;
+}
+
+#country-code {
+    width: 80px;
+}
+
+.continue-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: #b8860b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.booking-summary {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #e1e1e1;
+}
+
+.summary-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.summary-content {
+    padding: 1rem;
+}
+
+.summary-content h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.summary-location,
+.summary-date {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+}
+
+.summary-price {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e1e1e1;
+}
+
+.summary-price span {
+    display: block;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+}
+
+.summary-price h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .search-container {
+        margin: 1rem 0;
+        max-width: 100%;
+    }
+    
+    .nav-list {
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+    }
+    
+    .booking-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Add these new styles to the existing CSS file */
+
+.form-group {
+    position: relative;
+}
+
+.error-message {
+    display: none;
+    color: #dc3545;
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+}
+
+input:invalid {
+    border-color: #dc3545;
+}
+
+.was-validated input:invalid {
+    border-color: #dc3545;
+}
+
+.was-validated input:invalid + .error-message {
+    display: block;
+}
+
+.was-validated input:valid {
+    border-color: #28a745;
+}
+
+.phone-input input:invalid {
+    border-color: #dc3545;
+}
+
+.was-validated .phone-input input:invalid + .error-message {
+    display: block;
+}
+
+.was-validated .phone-input input:valid {
+    border-color: #28a745;
+}
+
+.payment-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.payment-content {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.payment-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.payment-header h1 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.bank-icon {
+    color: #2c3e50;
+}
+
+.payment-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.payment-method {
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.method-toggle {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #2c3e50;
+    text-align: left;
+}
+
+.method-toggle:hover {
+    background: #f8f9fa;
+}
+
+.method-toggle.active {
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.arrow-icon {
+    transition: transform 0.3s ease;
+}
+
+.method-toggle.active .arrow-icon {
+    transform: rotate(180deg);
+}
+
+.method-content {
+    display: none;
+    padding: 1rem;
+    background: white;
+}
+
+.method-content.active {
+    display: block;
+}
+
+.bank-logos {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.bank-logo {
+    height: 30px;
+    object-fit: contain;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .payment-content {
+        padding: 1rem;
+    }
+    
+    .payment-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .bank-logos {
+        flex-wrap: wrap;
+    }
+}
+
+/* Animation for content expansion */
+.method-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.method-content.active {
+    max-height: 200px;
+}
+/* Previous header and navigation styles remain unchanged */
+
+.payment-container {
+    max-width: 1038px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.payment-content {
+    background: white;
+    border: 1px solid #0066FF;
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+.payment-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.payment-header h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.house-icon {
+    color: #2c3e50;
+    width: 24px;
+    height: 24px;
+}
+
+.payment-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.payment-method {
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.method-toggle {
+    width: 100%;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #2c3e50;
+    text-align: left;
+}
+
+.arrow-icon {
+    transition: transform 0.3s ease;
+}
+
+.method-toggle.active .arrow-icon {
+    transform: rotate(180deg);
+}
+
+.method-content {
+    display: none;
+    padding: 1rem 0;
+}
+
+.method-content.active {
+    display: block;
+}
+
+.bank-options {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.bank-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.bank-option input[type="radio"] {
+    margin: 0;
+}
+
+.bank-logo {
+    height: 30px;
+    object-fit: contain;
+}
+
+.payment-button {
+    width: 100%;
+    max-width: 200px;
+    margin: 2rem auto 0;
+    display: block;
+    padding: 0.75rem;
+    background-color: #b8860b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: center;
+}
+
+.payment-button:hover {
+    background-color: #96700a;
+}
+
+/* Animation for content expansion */
+.method-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.method-content.active {
+    max-height: 200px;
+}
+
+@media (max-width: 768px) {
+    .payment-content {
+        padding: 1rem;
+    }
+    
+    .bank-options {
+        flex-wrap: wrap;
+    }
+}
